@@ -1,0 +1,94 @@
+{
+  "info": {
+    "_postman_id": "de962203-a80f-47ba-a22c-e02eb5a70119",
+    "name": "GPA api's",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47284116",
+    "_collection_link": "https://go.postman.co/collection/47284116-de962203-a80f-47ba-a22c-e02eb5a70119?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "profile saved to db",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"PravinK11\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/github/analyze",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "analyze"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "fetch all profiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/github",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "fetch unique user",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/github/PravinK11",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "github",
+            "PravinK11"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
