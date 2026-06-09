@@ -25,4 +25,17 @@ const getProfile= async (username) =>{
 
     return profile;
 }
-module.exports={getProfile};
+
+const getAllProfiles = async () => {
+    return await githubModel.getAllProfiles();
+};
+
+const getProfileByUsername = async (username) => {
+
+    const profile =
+        await githubModel.getProfileByUsername(username);
+
+    return profile;
+};
+
+module.exports={getProfile , getAllProfiles, getProfileByUsername};

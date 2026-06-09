@@ -26,4 +26,18 @@ const saveProfile= async (profile) =>{
     ]);
     return result;
 }
-module.exports= {saveProfile}
+const getAllProfiles= async()=>{
+    const [rows] = await db.query("select * from profile") ;
+    return rows ;
+    console.log(rows);
+}
+
+const getProfileByUsername= async(username)=>{
+//    const {username} = req.body;
+    const rows = await db.query("select * from profile where username=?",[username]) ;
+    return rows[0] ;
+    
+}
+
+
+module.exports= {saveProfile , getAllProfiles, getProfileByUsername}
